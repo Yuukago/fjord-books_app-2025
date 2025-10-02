@@ -1,0 +1,20 @@
+ja:
+  books:
+    index:
+      books: 書籍一覧
+      show: この本の詳細
+      new: 新しい本を追加
+    book:
+      title: タイトル
+      memo: メモ
+      author: 著者
+      picture: 表紙の画像
+    new:
+      new_book: 新しい本を追加
+      back: 書籍一覧に戻る
+    show:
+      edit: 本を編集する
+    edit:
+      editting_book: 本を編集する
+      show: この本の詳細に戻る
+      
