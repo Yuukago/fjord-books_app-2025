@@ -4,12 +4,14 @@
 
 <h1><%= t (".books") %></h1>
 
-<div id="books">
+<div id="books" class="index-items">
   <% @books.each do |book| %>
+  <div class="index-item">
     <%= render book %>
     <p>
       <%= link_to t(".show"), book %>
     </p>
+  </div>
   <% end %>
 </div>
 

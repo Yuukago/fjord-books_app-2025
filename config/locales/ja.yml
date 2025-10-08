@@ -1,5 +1,14 @@
 ja:
+  helpers:
+    submit:
+      create: 作成する
+      update: 更新する
+
   books:
+    book_created: 新しい本を作成しました。
+    book_updata: 本を更新しました。
+    delete_book: 本を削除しました。
+   
     index:
       books: 書籍一覧
       show: この本の詳細
@@ -14,7 +23,7 @@ ja:
       back: 書籍一覧に戻る
     show:
       edit: 本を編集する
+      delete: この本を削除する
     edit:
       editting_book: 本を編集する
-      show: この本の詳細に戻る
-      
+      show: 本の詳細に戻る

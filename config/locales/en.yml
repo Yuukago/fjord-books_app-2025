@@ -1,5 +1,14 @@
 en:
+  helpers:
+    submit:
+      create: Book Create
+      update: Book Updata
+
   books:
+    book_created: "Book was successfully created."
+    book_updata: "Book was successfully updated."
+    book_delete: "Book was successfully destroyed."
+
     index:
       books: Books
       show: Sho this book
@@ -14,6 +23,7 @@ en:
       back: Back to books
     show:
       edit: Edit this book
+      delete: Destroy this book
     edit:
       editting_book: Editing book
       show: Show this book    
