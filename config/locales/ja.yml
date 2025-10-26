@@ -1,29 +1,32 @@
 ja:
+  activerecord:
+    models:
+      book: 本
+    attributes:
+      book:
+        title: タイトル
+        memo: メモ
+        author: 著者
+        picture: 表紙の画像
   helpers:
     submit:
-      create: 作成する
-      update: 更新する
-
+      create: "%{model}を作成する"
+      update: "%{model}を更新する"
   books:
-    book_created: 新しい本を作成しました。
-    book_updata: 本を更新しました。
-    delete_book: 本を削除しました。
-   
+    action:
+      new: "新しい%{model}を追加"
+      show: "この%{model}の詳細"
+      edit: "%{model}を編集する"
+      back: "%{books}に戻る"
+    messages:
+      book_created: "%{model}を作成しました"
+      book_updata: "%{model}を更新しました"
+      delete_book: "%{model}を削除しました"
     index:
       books: 書籍一覧
-      show: この本の詳細
-      new: 新しい本を追加
-    book:
-      title: タイトル
-      memo: メモ
-      author: 著者
-      picture: 表紙の画像
     new:
-      new_book: 新しい本を追加
-      back: 書籍一覧に戻る
+      new_book: "新しい%{model}を追加"
     show:
-      edit: 本を編集する
-      delete: この本を削除する
+      delete: "%{model}を削除する"
     edit:
-      editting_book: 本を編集する
-      show: 本の詳細に戻る
+      editting_book: "%{model}を編集する"

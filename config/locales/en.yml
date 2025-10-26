@@ -1,29 +1,32 @@
 en:
+  activerecord:
+    models:
+      book: Book
+    attributes:
+      book:
+        title: title
+        memo: memo
+        author: author
+        picture: picture
   helpers:
     submit:
-      create: Book Create
-      update: Book Updata
-
+      create: "%{model} create"
+      update: "%{model} updata"
   books:
-    book_created: "Book was successfully created."
-    book_updata: "Book was successfully updated."
-    book_delete: "Book was successfully destroyed."
-
+    action:
+      new: "New %{model}"
+      show: "Sho this %{model}"
+      edit: "Edit this %{model}"
+      back: "Back to %{books}"
+    messages:
+      book_created: "%{model} was successfully created."
+      book_updata: "%{model} was successfully updated."
+      delete_book: "%{model} was successfully destroyed."
     index:
       books: Books
-      show: Sho this book
-      new: New book
-    book:
-      title: Title
-      memo: Memo
-      author: Author
-      picture: Picture
     new:
-      new_book: New book
-      back: Back to books
+      new_book: "New %{model}"
     show:
-      edit: Edit this book
-      delete: Destroy this book
+      delete: "Destroy this %{model}"
     edit:
-      editting_book: Editing book
-      show: Show this book    
+      editting_book: "Editing %{model}"

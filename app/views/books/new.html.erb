@@ -1,11 +1,11 @@
 <% content_for :title, "New book" %>
 
-<h1><%= t(".new_book") %></h1>
+<h1><%= t('.new_book', model: Book.model_name.human.downcase_first) %></h1>
 
 <%= render "form", book: @book %>
 
 <br>
 
 <nav class="page-nav">
-  <%= link_to t(".back"), books_path %>
+  <%= link_to t('books.action.back', books: t('books.index.books').downcase_first), books_path %>
 </nav>

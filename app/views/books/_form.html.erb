@@ -12,23 +12,23 @@
   <% end %>
 
   <div>
-    <%= form.label t("title", scope: "books.book"), style: "display: block" %>
+    <%= form.label Book.human_attribute_name("title") , style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label t("memo", scope: "books.book"), style: "display: block" %>
+    <%= form.label Book.human_attribute_name("memo"), style: "display: block" %>
     <%= form.textarea :memo %>
   </div>
 
   <div>
-    <%= form.label t("author", scope: "books.book"), style: "display: block" %>
+    <%= form.label Book.human_attribute_name("author"), style: "display: block" %>
     <%= form.text_field :author %>
   </div>
 
   <div>
     <div>
-    <%= form.label t("picture", scope: "books.book"), style: "display: block" %>
+    <%= form.label Book.human_attribute_name("picture"), style: "display: block" %>
     <%= form.file_field :picture %>
   </div>
 

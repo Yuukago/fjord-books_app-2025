@@ -69,5 +69,3 @@ group :test do
 end
 
 gem 'carrierwave'
-
-gem 'i18n_generators'
