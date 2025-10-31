@@ -10,23 +10,18 @@ en:
         picture: picture
   helpers:
     submit:
-      create: "%{model} create"
-      update: "%{model} updata"
+      create: create
+      update: updata
+  actions:
+    new: "New %{model}"
+    show: "Sho this %{model}"
+    edit: "Edit this %{model}"
+    delete: "Destroy this %{model}"
+    back: Back to home
+  flash_messages:
+    created: "%{model} was successfully created."
+    updated: "%{model} was successfully updated."
+    deleted: "%{model} was successfully destroyed."
   books:
-    action:
-      new: "New %{model}"
-      show: "Sho this %{model}"
-      edit: "Edit this %{model}"
-      back: "Back to %{books}"
-    messages:
-      book_created: "%{model} was successfully created."
-      book_updata: "%{model} was successfully updated."
-      delete_book: "%{model} was successfully destroyed."
     index:
       books: Books
-    new:
-      new_book: "New %{model}"
-    show:
-      delete: "Destroy this %{model}"
-    edit:
-      editting_book: "Editing %{model}"
