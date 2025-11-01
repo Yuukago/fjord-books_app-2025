@@ -1,12 +1,12 @@
 <% content_for :title, "Editing book" %>
 
-<h1><%= t(:edit, scope: [:actions], model: Book.model_name.human.downcase_first) %></h1>
+<h1><%= t('actions.edit', model: Book.model_name.human.downcase_first) %></h1>
 
 <%= render "form", book: @book %>
 
 <br>
 
 <nav class="page-nav">
-  <%= link_to t(:show, scope: [:actions], model: Book.model_name.human.downcase_first), @book %> |
-  <%= link_to t(:back, scope: [:actions]), books_path %>
+  <%= link_to t('actions.show', model: Book.model_name.human.downcase_first), @book %> |
+  <%= link_to t('actions.back'), books_path %>
 </nav>

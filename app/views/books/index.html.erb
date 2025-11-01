@@ -9,10 +9,10 @@
   <div class="index-item">
     <%= render book %>
     <p>
-      <%= link_to t(:show, scope: [:actions], model: Book.model_name.human.downcase_first), book %>
+      <%= link_to t('actions.show', model: Book.model_name.human.downcase_first), book %>
     </p>
   </div>
   <% end %>
 </div>
 
-<%= link_to t(:new, scope: [:actions], model: Book.model_name.human.downcase_first), new_book_path %>
+<%= link_to t('actions.new', model: Book.model_name.human.downcase_first), new_book_path %>
