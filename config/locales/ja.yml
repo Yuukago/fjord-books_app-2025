@@ -1,0 +1,27 @@
+ja:
+  activerecord:
+    models:
+      book: 本
+    attributes:
+      book:
+        title: タイトル
+        memo: メモ
+        author: 著者
+        picture: 表紙の画像
+  helpers:
+    submit:
+      create: 作成する
+      update: 更新する
+  actions:
+    new: "新しい%{model}を追加"
+    show: "この%{model}の詳細"
+    edit: "%{model}を編集する"
+    delete: "%{model}を削除する"
+    back: ホーム画面に戻る 
+  flash_messages:
+    created: "%{model}を作成しました"
+    updated: "%{model}を更新しました"
+    deleted: "%{model}を削除しました"
+  books:
+    index:
+      books: 書籍一覧
