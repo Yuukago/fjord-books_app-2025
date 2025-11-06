@@ -12,4 +12,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :books do
+    get 'page/:page', action: :index, on: :collection
+  end
 end

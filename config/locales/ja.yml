@@ -183,6 +183,12 @@ ja:
       short: "%m/%d %H:%M"
     pm: 午後
   views:
+    pagination:
+      first: "&laquo; 最初へ"
+      last: "最後へ &raquo;"
+      previous: "&lsaquo; 前へ"
+      next: "次へ &rsaquo;"
+      truncate: "&hellip;"
     common:
       show: "この%{name}を表示"
       edit: "この%{name}を編集"
