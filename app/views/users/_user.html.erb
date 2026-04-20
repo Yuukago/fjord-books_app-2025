@@ -1,11 +1,11 @@
 <div>
   <p>
-    <strong>e-mail:</strong>
+    <strong><%= User.human_attribute_name(:email) %>:</strong>
     <%= user.email %>
   </p>
 
   <p>
-    <strong>introduction:</strong>
+    <strong><%= User.human_attribute_name(:introduction) %>:</strong>
     <%= user.introduction %>
   </p>
 </div>

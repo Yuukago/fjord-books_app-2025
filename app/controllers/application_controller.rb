@@ -7,11 +7,11 @@ class ApplicationController < ActionController::Base
   allow_browser versions: :modern
 
   def after_sign_in_path_for(resource_or_scope)
-    "/books"
+    '/books'
   end
 
   def after_sign_out_path_for(resource_or_scope)
-    "/users/sign_in"
+    '/users/sign_in'
   end
 
   protected
