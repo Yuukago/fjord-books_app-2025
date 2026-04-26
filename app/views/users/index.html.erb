@@ -1,4 +1,4 @@
-<h1><%= t('layout.user_list') %></h1>
+<h1><%= t('layout.list', model: User.model_name.human) %></h1>
 
 <div id="users" class="index-items">
   <% @users.each do |user| %>
@@ -8,10 +8,7 @@
         <%= link_to t('.profile'), user_path(user) %>
       </p>
     </div>
-  <% end %>  
+  <% end %>
 </div>
 
 <%= paginate @users %>
-
-<%= link_to t('devise.shared.links.back'), :back %> |
-<%= link_to t('views.common.back', name: i18n_pluralize(Book.model_name.human.downcase)), books_path %>

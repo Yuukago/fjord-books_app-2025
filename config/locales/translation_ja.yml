@@ -16,7 +16,7 @@ ja:
         introduction: 自己紹介
   layout:
     my_profile: マイプロフィール
-    user_list: ユーザー一覧
+    list: "%{model}一覧"
     logged_in_as: "ログイン中: %{email}"
   users:
     index:

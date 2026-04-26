@@ -7,8 +7,8 @@
 <nav class="page-nav">
  <% if current_user.id == params[:id].to_i %>
     <%= link_to t('devise.registrations.edit.title', resource: User.model_name.human), edit_user_registration_path, class: "navbar-link" %> |
-    <%= link_to t('views.common.back', name: i18n_pluralize(Book.model_name.human.downcase)), books_path %>
+    <%= link_to t('layout.list', model: User.model_name.human), users_path, class: "navbar-link" %>
   <% else %>
-    <%= link_to t('views.common.back', name: i18n_pluralize(Book.model_name.human.downcase)), books_path %>
+    <%= link_to t('layout.list', model: User.model_name.human), users_path, class: "navbar-link" %>
   <% end %>
 </nav>
