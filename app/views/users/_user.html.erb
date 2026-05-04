@@ -25,4 +25,11 @@
     <%= user.self_introduction %>
   </p>
 
+    <% if user.avatar.attached? %>
+      <p>
+      <strong><%= User.human_attribute_name(:profile_image) %>:</strong>
+      <%= image_tag user.avatar %>
+      </p>
+    <% end %>
+
 </div>
