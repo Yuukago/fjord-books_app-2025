@@ -1,0 +1,14 @@
+<h1><%= t('layout.my_profile') %></h1>
+<p><%= User.human_attribute_name(:email) %> : <%= @user.email %></p>
+<p><%= User.human_attribute_name(:postal_code) %> : <%= @user.postal_code %></p>
+<p><%= User.human_attribute_name(:address) %> : <%= @user.address %></p>
+<p><%= User.human_attribute_name(:introduction) %> : <%= @user.introduction %></p>
+
+<nav class="page-nav">
+ <% if current_user.id == params[:id].to_i %>
+    <%= link_to t('devise.registrations.edit.title', resource: User.model_name.human), edit_user_registration_path, class: "navbar-link" %> |
+    <%= link_to t('layout.list', model: User.model_name.human), users_path, class: "navbar-link" %>
+  <% else %>
+    <%= link_to t('layout.list', model: User.model_name.human), users_path, class: "navbar-link" %>
+  <% end %>
+</nav>
