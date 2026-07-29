@@ -4,6 +4,16 @@
   <%= render @report %>
 </div>
 
+<h1> <%= t('views.common.title_index', name: Comment.model_name.human) %></h1>
+
+<div>
+  <%= render(@report.comments) || "コメントはありません" %>
+</div>
+
+<div>
+  <%= render 'comments/form', report: @report, comment: Comment.new %>
+</div>
+
 <nav class="page-nav">
   <% if current_user == @report.user %>
     <%= link_to t('views.common.edit', name: Report.model_name.human), edit_report_path(@report) %> |
