@@ -17,12 +17,11 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.user = current_user
-    @report = Report.find(params[:report_id])
-    @comment.commentable = @report
+    @comment.commentable = params[:book_id].present? ? Book.find(params[:book_id]) : Report.find(params[:report_id])
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @report, notice: I18n.t('controllers.common.notice_create', name: Comment.model_name.human) }
+        format.html { redirect_to @comment.commentable, notice: I18n.t('controllers.common.notice_create', name: Comment.model_name.human) }
       else
         format.html { render plain: @comment.errors.full_messages, status: :unprocessable_entity }
       end
