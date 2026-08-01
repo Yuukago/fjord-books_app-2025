@@ -7,7 +7,7 @@
 <h1> <%= t('views.common.title_index', name: Comment.model_name.human) %></h1>
 
 <div>
-  <%= render(@book.comments) || "コメントはありません" %>
+  <%= render(@book.comments, commentable: @book) || "コメントはありません" %>
 </div>
 
 <div>

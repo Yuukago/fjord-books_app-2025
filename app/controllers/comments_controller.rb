@@ -3,17 +3,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: %i[destroy]
 
-  # GET /comments or /comments.json
-  def index
-    @comments = Comment.all
-  end
-
-  # GET /comments/new
-  def new
-    @comment = Comment.new
-  end
-
-  # POST /comments or /comments.json
+  # POST commentable/:id/comments
   def create
     @comment = Comment.new(comment_params)
     @comment.user = current_user
@@ -28,7 +18,7 @@ class CommentsController < ApplicationController
     end
   end
 
-  # DELETE /comments/1 or /comments/1.json
+  # DELETE commentable/:id/comments/:comment_id
   def destroy
     @commentable = @comment.commentable
     @comment.destroy!
