@@ -9,12 +9,10 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @comment.commentable = params[:book_id].present? ? Book.find(params[:book_id]) : Report.find(params[:report_id])
 
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @comment.commentable, notice: I18n.t('controllers.common.notice_create', name: Comment.model_name.human) }
-      else
-        format.html { render plain: @comment.errors.full_messages, status: :unprocessable_entity }
-      end
+    if @comment.save
+      redirect_to @comment.commentable, notice: I18n.t('controllers.common.notice_create', name: Comment.model_name.human)
+    else
+      render @comment.commentable, status: :unprocessable_entity
     end
   end
 
@@ -23,9 +21,7 @@ class CommentsController < ApplicationController
     @commentable = @comment.commentable
     @comment.destroy!
 
-    respond_to do |format|
-      format.html { redirect_to @commentable, notice: I18n.t('controllers.common.notice_destroy', name: Comment.model_name.human) }
-    end
+    redirect_to @commentable, notice: I18n.t('controllers.common.notice_destroy', name: Comment.model_name.human)
   end
 
   private
