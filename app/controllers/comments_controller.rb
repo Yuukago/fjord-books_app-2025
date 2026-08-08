@@ -2,6 +2,7 @@
 
 class CommentsController < ApplicationController
   before_action :set_comment, only: %i[destroy]
+  before_action :check_owner, only: %i[destroy]
 
   # POST commentable/:id/comments
   def create
@@ -34,5 +35,10 @@ class CommentsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def comment_params
     params.expect(comment: %i[body user commentable])
+  end
+
+  # Verify the owner of the comment.
+  def check_owner
+    redirect_to @comment.commentable if current_user != @comment.user
   end
 end

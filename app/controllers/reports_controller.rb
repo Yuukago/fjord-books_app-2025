@@ -61,6 +61,6 @@ class ReportsController < ApplicationController
 
   # Verify the owner of the daily report.
   def check_owner
-    redirect_to @report unless current_user == @report.user
+    redirect_to @report if current_user != @report.user
   end
 end
