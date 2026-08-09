@@ -1,6 +1,6 @@
 <div id="<%= dom_id comment %>" class="show-item">
   <p>
-    <strong><%= comment.user.name.presence || comment.user.email %></strong>
+    <strong><%= current_user_name(comment.user) %></strong>
     <%= l comment.created_at, format: :long %>
   </p>
 
