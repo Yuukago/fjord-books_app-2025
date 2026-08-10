@@ -1,0 +1,14 @@
+<div id="<%= dom_id comment %>" class="show-item">
+  <p>
+    <strong><%= current_user_name(comment.user) %></strong>
+    <%= l comment.created_at, format: :long %>
+  </p>
+
+  <p>
+    <%= comment.body %>
+  </p>
+
+  <% if current_user == comment.user %>
+    <%= button_to t('views.common.destroy', name: Comment.model_name.human), [commentable, comment], method: :delete %>
+  <% end %>
+</div>

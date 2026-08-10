@@ -1,0 +1,17 @@
+<div id="<%= dom_id report %>">
+  <p>
+    <strong><%= t('activerecord.attributes.report.created_at') %>:</strong>
+    <%= l report.created_at, format: :long %>
+  </p>
+
+  <p>
+    <strong><%= t('activerecord.attributes.report.title') %>:</strong>
+    <%= report.title %>
+  </p>
+
+  <p>
+    <strong><%= t('activerecord.attributes.report.body') %>:</strong>
+    <%= report.body %>
+  </p>
+
+</div>
